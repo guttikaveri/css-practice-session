@@ -1,0 +1,70 @@
+selectors: 
+
+types of selectors in css?
+A: Universal (*)	Selects all elements.	               * { margin: 0; }
+Type	          Selects elements by tag name.	                p { font-size: 16px; }
+Class (.)	      Selects elements with a specific class.	      .highlight { color: red; }
+ID (#)	        Selects a single element with a unique ID.	             #header { text-align: center; }
+Grouping (,)	Groups selectors to apply the same style.	         h1, h2, p { margin: 0; }
+Descendant	     Selects all nested elements of a parent.	               div p {}
+Child (>)	      Selects direct children of an element.	                      ul > li {}
+Adjacent Sibling (+)	Selects the immediate sibling of an element.	 h1 + p {}
+General Sibling (~)	     Selects all siblings after an element.	                h1 ~ p {}
+Attribute	                    Selects elements based on attributes.	         input[type="text"] {}
+Pseudo-classes	                Selects elements in a specific state.	                             a:hover {}
+Pseudo-elements           	Styles specific parts of an element.	                         p::first-letter {}
+------------------------------------------------------------------------------------------------------------
+What is the difference between class and id selectors?
+Answer:
+A class selector (.) is used to apply styles to multiple elements. Example: .button {}.
+An ID selector (#) is unique and applied to a single element. Example: #header {}.
+IDs have higher specificity than classes
+
+************************************************************************************************************
+1. What is the CSS Box Model?
+A:The CSS Box Model is a conceptual structure used to define the layout and spacing of HTML elements. 
+It consists of the following parts:
+Content: The actual content of the element (e.g., text, images).
+Padding: Space between the content and the border.
+Border: Surrounds the padding and content.
+Margin: Space outside the border, separating the element from others.
+---------------------------------------------------------------------------------------------------
+
+2. How do border-box and content-box differ?
+A:content-box (default): Width and height include only the content. Padding, borders, and margins are added outside.
+border-box: Width and height include the content, padding, and border. Margin is added outside this box.
+---------------------------------------------------------------------------------------------------------
+ 3.What is box-sizing in CSS, and how does border-box work?
+A:The box-sizing property determines whether the size of an element includes padding and border or only the content.
+
+With box-sizing: border-box;, the width and height include the content, padding, and border, making layout calculations easier.
+
+
+Feature:	content-box (Default)	border-box
+Width/Height:	Includes only content.	Includes content, padding, and border.
+Padding/Border:	Added outside the defined size.	Fits within the defined size.
+Use Case:	Precise control over content size.	Simplified layout calculations.
+
+ EX: /* Content-box */
+div {
+    box-sizing: content-box;
+    width: 200px; /* Content only */
+    padding: 20px; /* Total width = 240px */
+}
+
+/* Border-box */
+div {
+    box-sizing: border-box;
+    width: 200px; /* Includes content, padding, and border */
+}
+**********************************************************************************************************
+ positioning:
+ Position Property Values
+Value	    Description
+static	    Default position. Elements are placed in the normal document flow.
+relative	Positioned relative to its normal position.
+absolute	Positioned relative to its nearest positioned ancestor (not static).
+fixed	    Positioned relative to the viewport; does not move with scrolling.
+sticky	    Toggles between relative and fixed depending on the scroll position.
+
+
