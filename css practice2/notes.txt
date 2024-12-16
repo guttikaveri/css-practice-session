@@ -1,0 +1,176 @@
+1. Difference between flex row and column?
+row: The main axis is horizontal (default). Items are laid out in a row.
+ display: flex;
+flex-direction: row; /* Default */
+
+column: The main axis is vertical. Items are laid out in a column.
+display: flex;
+flex-direction: column;
+
+
+EXAMPLE:<div style="display: flex; flex-direction: column;">
+    <div>Item 1</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+</div>
+--------------------------------------------------------------------------------------------------
+ 2. Explain Inline, Internal, and External Stylesheet?
+   A.Inline: Applied directly to an HTML element using the `style` attribute.
+     
+     <div style="color: red;">Hello</div>
+    
+     Internal: Written inside a `<style>` tag in the `<head>` of an HTML document.
+     
+     <style>
+         div { color: blue; }
+     </style>
+    
+
+   External: Written in a separate CSS file linked using a `<link>` tag.
+     
+     <link rel="stylesheet" href="styles.css">
+-------------------------------------------------------------------------------------------------------------
+3. Difference between justify-content and align-items?
+   justify-content: Aligns items along the main axis.
+     display: flex;
+     justify-content: center; /* Aligns items horizontally */
+     
+   align-items: Aligns items along the cross axis.
+     display: flex;
+     align-items: center; /* Aligns items vertically */
+     
+
+   Example:
+   
+   <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+       <div>Centered</div>
+   </div>
+   
+
+--------------------------------------------------------------------------------------------------------------------
+ 4. Difference between position: sticky and fixed?
+   sticky: The element toggles between relative` and fixed depending on the scroll position.
+     position: sticky;
+     top: 10px;
+     
+     Example:
+     <div style="position: sticky; top: 0;">Sticky Header</div>
+    
+    fixed: The element is always fixed relative to the viewport.
+     position: fixed;
+     top: 10px;
+     Example:
+     <div style="position: fixed; top: 0;">Fixed Header</div>
+     -------------------------------------------------------------------------------------------------------------
+ 5.What is z-index in CSS?
+z-index: Determines the stack order of elements. Higher `z-index` means the element appears above others.
+     div { z-index: 10; position: relative; }
+     
+
+-----------------------------------------------------------------------------------------------------------------
+6. What is box-sizing?
+ Controls whether the padding and border are included in the element’s total width and height.
+     content-box (default): Width/height includes only the content.
+     border-box: Includes padding and border in the width/height.
+    
+     box-sizing: border-box;
+    
+
+------------------------------------------------------------------------------------------------------------------------
+7. What is animation delay?
+   Specifies the time to wait before starting the animation.
+
+     animation: move 2s;
+     animation-delay: 1s;
+     
+
+---------------------------------------------------------------------------------------------------------------------
+
+ 8.Explain CSS Box Model?
+   The box model includes:
+    Content: The innermost part.
+    Padding: Space between content and border.
+    Border: Surrounds the padding.
+    Margin: Space outside the border.
+
+   Example:
+ 
+   div {
+       width: 100px;
+       padding: 10px;
+       border: 5px solid black;
+       margin: 20px;
+   }
+   ---------------------------------------------------------------------------------------------------------
+   
+ 9. Difference between display: none and visibility: hidden
+   display: none: Hides the element and removes it from the layout.
+   visibility: hidden`**: Hides the element but keeps its space in the layout.
+
+-------------------------------------------------------------------------------------------------------------------
+
+ 10. What are CSS combinators?
+   Combine selectors to target specific elements.
+     Descendant (space): Targets children of a parent.
+       
+       div p { color: red; }
+    
+     Child (>): Targets direct children.
+
+       div > p { color: blue; }
+    
+     Adjacent sibling (+): Targets the next sibling.
+       
+       h1 + p { color: green; }
+       
+     General sibling (~): Targets all siblings.
+    
+       h1 ~ p { color: orange; }
+       
+
+---------------------------------------------------------------------------------------------------------------
+ 11. Difference between absolute and relative positioning?
+   absolute: Positioned relative to the nearest positioned ancestor.
+     position: absolute;
+     top: 10px;
+     left: 20px;
+    
+
+   relative: Positioned relative to its normal position.
+     
+     position: relative;
+     top: 10px;
+     
+
+--------------------------------------------------------------------------------------------------------------------
+
+ 12. Difference between transition and animation?
+   transition: Used for smooth changes between states (e.g., hover).
+     
+     div { transition: all 0.5s; }
+     animation: More complex, allows keyframes for detailed control.
+     @keyframes move {
+         0% { transform: translateX(0); }
+         100% { transform: translateX(100px); }
+     }
+     div { animation: move 2s infinite; }
+    
+
+---------------------------------------------------------------------------------------------------------------------
+
+ 13.Property to merge cells vertically/horizontally in grid?
+   grid-row (vertically) and grid-column (horizontally).
+     grid-row: 1 / 3;
+     grid-column: 1 / 3;
+     
+
+---------------------------------------------------------------------------------------------------------
+
+ 14. What is position` in CSS?
+   Determines how an element is positioned in the document.
+     static (default): Normal flow.
+     relative: Offset relative to its normal position.
+     absolute: Positioned relative to the nearest ancestor.
+     fixed: Fixed relative to the viewport.
+     sticky: Relative until a defined scroll point.
+
